@@ -1,0 +1,9 @@
+Name: Bracketify file
+Description: Transform `foo$bar` to `foo[["bar"]] in current file.
+Binding: bracketifyFile
+Interactive: false
+
+Name: Bracketify selection
+Description: Transform `foo$bar` to `foo[["bar"]] in current selection.
+Binding: bracketifySelection
+Interactive: false
