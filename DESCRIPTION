@@ -1,12 +1,11 @@
 Package: bracketify
 Type: Package
-Title: What the Package Does (Title Case)
+Title: An Addin to Transform Dollar Subsetting to Brackets Subsetting
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Stéphane Laurent
+Maintainer: Stéphane Laurent <laurent_step@outlook.fr>
+Description: Provides a 'RStudio' addin to transform dollar subsetting to brackets subsetting (e.g. `foo$bar` to `foo[["bar"]]`).
+License: GPL-3
 Encoding: UTF-8
 Imports:
     rstudioapi
