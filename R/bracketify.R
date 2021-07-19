@@ -8,7 +8,9 @@ bracketifyFile <- function(){
   }
   contents <- paste0(editorContext[["contents"]], collapse = "\n")
   newContents <- gsub(
-    "(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)* *)\\2", '\\1[["\\3"]]',
+    "(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)*)\\2",
+    #"(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)* *)\\2",
+    '\\1[["\\3"]]',
     contents, perl=TRUE
   )
   setDocumentContents(newContents, editorContext[["id"]])
@@ -29,7 +31,8 @@ bracketifySelection <- function(){
     return(invisible(NULL))
   }
   newText <- gsub(
-    "(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)* *)\\2", '\\1[["\\3"]]',
+    "(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)*)\\2",
+    #"(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)* *)\\2",
     text, perl=TRUE
   )
   modifyRange(selection[["range"]], newText, editorContext[["id"]])
