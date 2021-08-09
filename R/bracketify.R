@@ -33,6 +33,7 @@ bracketifySelection <- function(){
   newText <- gsub(
     "(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)*)\\2",
     #"(\\w*)\\$(`?)( *\\w+(?:[._\\- ]+\\w+)* *)\\2",
+    '\\1[["\\3"]]',
     text, perl=TRUE
   )
   modifyRange(selection[["range"]], newText, editorContext[["id"]])
